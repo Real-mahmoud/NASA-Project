@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- leaflet links  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- maptiler geocoding for search  -->
+    <script src="https://cdn.maptiler.com/maptiler-geocoding-control/v2.1.7/leaflet.umd.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-geocoding-control/v2.1.7/style.css" rel="stylesheet">
+   
+    <title>Document</title>
+</head>
+<body>
+    <img class="img-gradiant" src="images/gradient.png" alt="">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <header>
+            <h1 data-aos="fade-down" data-aos-duration="1500" class="logo">RABELS</h1>
+
+            <nav>
+                <a data-aos="fade-down" data-aos-duration="1500" href="#">COMPANY</a>
+                <a data-aos="fade-down" data-aos-duration="2000" href="#">FEATURES</a>
+                <a data-aos="fade-down" data-aos-duration="2500" href="#">RESOURCES</a>
+                <a data-aos="fade-down" data-aos-duration="3000" href="#">DOCS</a>
+            </nav>
+            
+            <button class="btn-signing">SIGNING</button>
+        </header>
+        <main>
+            <div data-aos="fade-right"
+                 data-aos-offset="300"
+                 data-aos-easing="ease-in-sine" data-aos-duration="2000" class="content">
+                <div class="tag-box">
+                    <div class="tag">INTRODUCING &wedbar;</div>
+                </div>
+                <h1>EMAIL FOR <br> DEVELOPERS</h1>
+                <p class="description">the best way to reach uumans insted of spam folders, dlever transactional and marketing emails at scale.</p>
+                <div class="buttons">
+                    <a href="#" class="btn-get-started">DOCUMENTATION </a>
+                    <a href="#" class="btn-signing-main">Getstarted </a>
+                </div>
+            </div>
+        </main>
+        <spline-viewer data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="2000" class="robot-3d" url="https://prod.spline.design/XBH6JKw2eEtIngaX/scene.splinecode"></spline-viewer>
+    </div>
+
+    <!-- earth + Quotes  -->
+    <div class="earth-container">
+        <div class="main-heading">
+            <h2 data-aos="zoom-in" data-aos-duration="1000">The earth</h2>
+        </div>
+        <q data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" data-aos-duration="1000">A world so finely made cannot exist without a Creator; even the changing of its climates reflects the depth of His wisdom.</q>
+        <spline-viewer data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0" data-aos-duration="1000" class="earth" url="https://prod.spline.design/w9lODYysx5YRlBnj/scene.splinecode"></spline-viewer>
+    
+        </div>
+
+    <!-- map  -->
+     <div class="map">
+         <div class="main-heading">
+             <h2 data-aos="zoom-in" data-aos-duration="1000">Weather</h2>
+         </div>
+        <div class="container">
+            <div id="result"></div>
+            <form id="searchForm">
+                <input type="text" id="address" placeholder="Enter a place..." required>
+                <input type="date" id="date" required>
+                <select id="parameter">
+                    <option value="T2M">Temperature (°C)</option>
+                    <option value="PRECTOTCORR">Precipitation (mm/day)</option>
+                    <option value="WS10M">Wind Speed (m/s)</option>
+                </select>
+                <button type="submit">Get Data</button>
+            </form>
+
+             <div id="map"></div>
+        </div>
+    </div>
+        
+    
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.71/build/spline-viewer.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+  <script>
+    AOS.init();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
